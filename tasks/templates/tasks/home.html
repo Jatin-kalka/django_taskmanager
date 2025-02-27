@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Task Manager</h1>
+        <div>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Welcome to Task Manager</h2>
+        <p>Stay on top of your tasks effortlessly with our sleek and intuitive task management system!</p>
+        <a href="{% url 'login' %}" class="btn">Get Started</a>
+    </div>
+</body>
+</html>
