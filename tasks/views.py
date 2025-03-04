@@ -1,3 +1,4 @@
+# Import libraries
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -24,7 +25,7 @@ def dashboard(request):
     else:
         return redirect('login')
     
-#create task
+# Create a new task - Restricted to logged-in users
 @login_required
 def create_task(request):
     if request.method == 'POST':
@@ -38,7 +39,7 @@ def create_task(request):
         form = TaskForm()
     return render(request, 'tasks/create_task.html', {'form': form})
 
-#update task
+# Update an existing task - Restricted to the owner or an admin
 @login_required
 def update_task(request, task_id):
     task = get_object_or_404(Task, id=task_id)
@@ -52,7 +53,7 @@ def update_task(request, task_id):
     else:
         form = TaskForm(instance=task)
     return render(request, 'tasks/update_task.html', {'form': form})
-
+# Delete a task - Restricted to the  an admin
 @login_required
 def delete_task(request, task_id):
     task = get_object_or_404(Task, id=task_id)
@@ -66,7 +67,7 @@ def delete_task(request, task_id):
 
     return JsonResponse({"error": "Invalid request"}, status=400)
 
-#User Registration
+# User Registration View
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -76,7 +77,7 @@ def register(request):
         return redirect('dashboard')
     return render(request, 'tasks/register.html')
 
-
+# User Login View
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -89,6 +90,7 @@ def user_login(request):
             return render(request, 'tasks/login.html', {'error': 'Invalid credentials'})
     return render(request, 'tasks/login.html')
 
+# User Logout View - Restricted to logged-in users
 @login_required
 def user_logout(request):
     logout(request)
