@@ -20,4 +20,15 @@ Hosting Platform: PythonAnywhere.
 Superuser name: admin
 password: admin
 
+2. Three Standard Users Login:
+User Name: alice
+Password : alice123456
+
+User Name: anderson
+Password : anderson123456
+
+User Name: smith
+Password : smith123456
+
+
 
