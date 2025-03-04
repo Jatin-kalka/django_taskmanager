@@ -17,7 +17,21 @@ Frontend: HTML, CSS, Django Template Language.
 Database: SQLite using Django ORM.
 Hosting Platform: PythonAnywhere.
 
-Superuser name: admin
-password: admin
+The followings are registered logins of Task Manager
+1. Super User Login:
+User name: admin
+password:  admin
+
+2. Three Standard Users Login:
+User Name: alice
+Password : alice123456
+
+User Name: anderson
+Password : anderson123456
+
+User Name: smith
+Password : smith123456
+
+
 
 
