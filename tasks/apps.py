@@ -1,3 +1,4 @@
+#My projects
 from django.apps import AppConfig
 
 

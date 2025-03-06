@@ -38,7 +38,7 @@ def create_task(request):
     else:
         form = TaskForm()
     return render(request, 'tasks/create_task.html', {'form': form})
-
+#My Project
 # Update an existing task - Restricted to the owner or an admin
 @login_required
 def update_task(request, task_id):
