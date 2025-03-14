@@ -26,12 +26,6 @@ password:  admin
 User Name: alice
 Password : alice123456
 
-User Name: anderson
-Password : anderson123456
-
-User Name: smith
-Password : smith123456
-
-
+Deployment link is given in report
 
 
